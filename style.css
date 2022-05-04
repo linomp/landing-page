@@ -6,6 +6,17 @@ body {
     background-image: url('img/usfq.jpg');
     background-repeat: repeat;
     background-size: 50%;
-    color: white;
+
+}
+
+img {
+    padding-top: 5px;
+}
+
+a {
+    color: rgb(247, 252, 139);
     font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
 }
