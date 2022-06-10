@@ -13,10 +13,23 @@ img {
     padding-top: 5px;
 }
 
-a {
+
+.song {
     color: rgb(247, 252, 139);
     font-size: large;
     font-weight: bold;
     text-decoration: none;
     font-family: Roboto, sans-serif;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
