@@ -1,16 +1,6 @@
-body {
-    margin: auto;
-    width: 90%;
-    padding: 10px;
-    background-color: black;
-    background-image: url('img/usfq.jpg');
-    background-repeat: repeat;
-    background-size: 50%;
-
-}
-
 img {
     padding-top: 5px;
+    width: 50%;
 }
 
 
