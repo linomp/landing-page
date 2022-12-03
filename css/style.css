@@ -3,7 +3,7 @@ body.index {
     background-color: black;
     width: 90%;
     padding: 10px;
-    background-image: url('img/usfq_old.jpg');
+    background-image: url('../img/usfq_old.jpg');
     background-repeat: repeat;
     background-size: 50%;
 }
