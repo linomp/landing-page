@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
-import { Col, Row } from 'react-bootstrap';
-import Lyrics from './Lyrics';
+import { buildUrl, buildGravityTopic, getClient } from './utils';
 
+import { Col, Row } from 'react-bootstrap';
 import QRCode from "react-qr-code";
 
-import { buildUrl, getClient } from './utils';
+import Lyrics from './Lyrics';
 
 let size = 256
 let qrWidth = 80
@@ -13,12 +13,14 @@ let qrWidth = 80
 export default function Home({ id }) {
 
     const [client,] = useState(getClient(id))
-    const topic = `commands/${id}`
 
     useEffect(() => {
         if (client.connected) {
             return
         }
+
+        const topic = buildGravityTopic(id)
+
         client.on('connect', function () {
             client.subscribe(topic, function (err) {
                 if (!err) {
@@ -28,7 +30,7 @@ export default function Home({ id }) {
         })
 
         client.on('message', function (topic, message) {
-            console.log(message.toString())
+            console.log(topic, message.toString())
         })
     }, [client.connected])
 

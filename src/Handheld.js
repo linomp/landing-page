@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from 'react-bootstrap'
 
-import { getClient } from './utils';
+import { getClient, buildGravityTopic } from './utils';
 
 
 export default function Handheld() {
-
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id')
 
     const [client,] = useState(getClient(id))
-    const topic = `commands/${id}`
+    const topic = buildGravityTopic(id)
 
     useEffect(() => {
         if (client.connected) {
             return
         }
+
         client.on('connect', function () {
             client.subscribe(topic, function (err) {
                 if (!err) {
@@ -50,5 +50,4 @@ export default function Handheld() {
             </Button>
         </div>
     )
-
 }

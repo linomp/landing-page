@@ -35,3 +35,8 @@ export function buildUrl(id) {
 
     return url;
 }
+
+
+export function buildGravityTopic(id) {
+    return `${id}/commands/gravity`
+}
