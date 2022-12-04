@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import uuid from 'react-uuid';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// TODO: toggle fixed or random id depending on env variable
 let id = "test123";//uuid();
 
 // Commented this out bc it causes component to render twice....
