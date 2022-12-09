@@ -4,26 +4,20 @@ var mqtt = require('mqtt/dist/mqtt')
 
 export function getClient(clientId) {
 
-    var host = 'ws://apps.xmp.systems:9011/mqtt'
+    const options = {
+        keepalive: 30,
+        clientId: clientId,
+        clean: true,
+        will: {
+            topic: 'WillMsg',
+            payload: 'Connection Closed abnormally..!',
+            qos: 0,
+            retain: false
+        },
+        rejectUnauthorized: false
+    }
 
-    // with these settings, the client was disconnecting too often...
-    // var options = {
-    //     keepalive: 30,
-    //     clientId: clientId,
-    //     clean: true,
-    //     reconnectPeriod: 1000,
-    //     connectTimeout: 30 * 1000,
-    //     will: {
-    //         topic: 'WillMsg',
-    //         payload: 'Connection Closed abnormally..!',
-    //         qos: 0,
-    //         retain: false
-    //     },
-    //     rejectUnauthorized: false
-    // }
-
-    //var client = mqtt.connect(host, options);
-    var client = mqtt.connect(host);
+    const client = mqtt.connect(process.env.REACT_APP_MQTT_HOST, options);
 
     return client
 }
@@ -31,7 +25,10 @@ export function getClient(clientId) {
 export function buildUrl(id) {
 
     let url = window.location.href + "handheld?id=" + id
-    console.log("URL: " + url)
+
+    if (process.env.REACT_APP_DEBUG) {
+        console.log("Handheld URL: " + url)
+    }
 
     return url;
 }
