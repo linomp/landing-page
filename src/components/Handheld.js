@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from 'react-bootstrap'
 
-import { getClient, buildGravityTopic } from './utils';
+import { getClient, buildGravityTopic } from '../modules/mqtt_utils';
 
+import { TOGGLE_BACKGROUND } from '../constants';
 
 export default function Handheld() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -18,8 +19,11 @@ export default function Handheld() {
 
         client.on('connect', function () {
             client.subscribe(topic, function (err) {
-                if (!err) {
-                    console.log(`subscribed to topic: ${topic}`)
+                if (err) {
+                    console.log(err)
+                }
+                else if (process.env.REACT_APP_DEBUG) {
+                    console.log(`Subscribed to topic: ${topic}`)
                 }
             })
         })
@@ -30,9 +34,9 @@ export default function Handheld() {
     }, [client.connected])
 
 
-    const mqttPublish = (context) => {
+    const mqttPublish = (msg) => () => {
         if (client) {
-            client.publish(topic, "TEST", 2, error => {
+            client.publish(topic, msg, 2, error => {
                 if (error) {
                     console.log('Publish error: ', error);
                 }
@@ -42,12 +46,12 @@ export default function Handheld() {
 
     return (
         <div className="mt-4 p-5 d-grid gap-3">
-            <Button variant="warning" size="lg" onClick={mqttPublish}>
-                Block level button
+            <Button variant="warning" size="lg" onClick={mqttPublish(TOGGLE_BACKGROUND)}>
+                Action 1
             </Button>
             <Button variant="dark" size="lg">
-                Block level button
+                Action 2
             </Button>
-        </div>
+        </div >
     )
 }

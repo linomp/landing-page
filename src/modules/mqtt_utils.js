@@ -5,9 +5,7 @@ var mqtt = require('mqtt/dist/mqtt')
 export function getClient(clientId) {
 
     const options = {
-        keepalive: 30,
         clientId: clientId,
-        clean: true,
         will: {
             topic: 'WillMsg',
             payload: 'Connection Closed abnormally..!',
@@ -17,22 +15,15 @@ export function getClient(clientId) {
         rejectUnauthorized: false
     }
 
-    const client = mqtt.connect(process.env.REACT_APP_MQTT_HOST, options);
+    // const client = mqtt.connect(process.env.REACT_APP_MQTT_HOST, options);
+    const client = mqtt.connect(process.env.REACT_APP_MQTT_HOST);
+
+    if (process.env.REACT_APP_DEBUG) {
+        console.log("MQTT host: " + process.env.REACT_APP_MQTT_HOST)
+    }
 
     return client
 }
-
-export function buildUrl(id) {
-
-    let url = window.location.href + "handheld?id=" + id
-
-    if (process.env.REACT_APP_DEBUG) {
-        console.log("Handheld URL: " + url)
-    }
-
-    return url;
-}
-
 
 export function buildGravityTopic(id) {
     return `${id}/commands/gravity`

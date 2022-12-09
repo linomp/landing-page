@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react'
 
-import { buildUrl, buildGravityTopic, getClient } from './utils';
+import { buildGravityTopic, getClient } from '../modules/mqtt_utils';
+import { buildUrl } from '../modules/browser_utils';
 
 import { Col, Row } from 'react-bootstrap';
 import QRCode from "react-qr-code";
 
+import { TOGGLE_BACKGROUND } from '../constants';
+
 import Lyrics from './Lyrics';
+
+import './Home.css';
 
 let size = 256
 let qrWidth = 80
@@ -13,6 +18,8 @@ let qrWidth = 80
 export default function Home({ id }) {
 
     const [client,] = useState(getClient(id))
+    const [redBG, setRedBG] = useState(false)
+    const [darkMode, setDarkMode] = useState(false)
 
     useEffect(() => {
         if (client.connected) {
@@ -23,20 +30,26 @@ export default function Home({ id }) {
 
         client.on('connect', function () {
             client.subscribe(topic, function (err) {
-                if (!err) {
-                    console.log(`subscribed to topic: ${topic}`)
+                if (err) {
+                    console.log(err)
+                }
+                else if (process.env.REACT_APP_DEBUG) {
+                    console.log(`Subscribed to topic: ${topic}`)
                 }
             })
         })
+    })
 
+    if (client) {
         client.on('message', function (topic, message) {
-            console.log(topic, message.toString())
+            if (message.toString() === TOGGLE_BACKGROUND) {
+                setRedBG(!redBG)
+            }
         })
-    }, [client.connected])
-
+    }
 
     return (
-        <Row>
+        <Row className={redBG ? "red-bg" : ""}>
             <Col>
                 <Lyrics children={(<div style={{ height: "auto", margin: "0 auto", maxWidth: qrWidth, width: "100%" }}>
                     <QRCode
