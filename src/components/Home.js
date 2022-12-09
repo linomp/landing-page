@@ -18,8 +18,7 @@ let qrWidth = 80
 export default function Home({ id }) {
 
     const [client,] = useState(getClient(id))
-    const [redBG, setRedBG] = useState(false)
-    const [darkMode, setDarkMode] = useState(false)
+    const [darkBG, setDarkBG] = useState(false)
 
     useEffect(() => {
         if (client.connected) {
@@ -43,18 +42,20 @@ export default function Home({ id }) {
     if (client) {
         client.on('message', function (topic, message) {
             if (message.toString() === TOGGLE_BACKGROUND) {
-                setRedBG(!redBG)
+                setDarkBG(!darkBG)
             }
         })
     }
 
     return (
-        <Row className={redBG ? "red-bg" : ""}>
+        <Row className={darkBG ? "red-bg" : ""}>
             <Col>
                 <Lyrics children={(<div style={{ height: "auto", margin: "0 auto", maxWidth: qrWidth, width: "100%" }}>
                     <QRCode
                         size={size}
                         style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+                        bgColor={darkBG ? "#000000" : "#FFFFFF"}
+                        fgColor={darkBG ? "#FFFFFF" : "#000000"}
                         value={buildUrl(id)}
                         viewBox={`0 0 ${size} ${size}`}
                         className="mb-4"
