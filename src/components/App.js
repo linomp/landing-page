@@ -2,7 +2,7 @@ import './App.css';
 
 import PropTypes from 'prop-types'
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Handheld from './Handheld';
 import Home from './Home';
@@ -12,13 +12,13 @@ function App(props) {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
-          <Route path="/" element={<Home id={props.id} />} />
+          <Route exact path="/" element={<Home id={props.id} />} />
           <Route path="/handheld" element={<Handheld />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

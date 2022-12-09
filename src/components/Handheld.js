@@ -5,9 +5,13 @@ import { getClient, buildGravityTopic } from '../modules/mqtt_utils';
 
 import { TOGGLE_BACKGROUND } from '../constants';
 
+import { useLocation } from 'react-router-dom'
+
 export default function Handheld() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get('id')
+
+    const location = useLocation()
+    const searchParams = new URLSearchParams(location.search)
+    const id = searchParams.get('id')
 
     const [client,] = useState(getClient(id))
     const topic = buildGravityTopic(id)
