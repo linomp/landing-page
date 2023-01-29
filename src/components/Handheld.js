@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from 'react-bootstrap'
 
-import { getClient, buildGravityTopic } from '../modules/mqtt_utils';
+import { getClient, buildTopic } from '../modules/mqtt_utils';
 
-import { TOGGLE_BACKGROUND } from '../constants';
+import {DO_GRAVITY, TOGGLE_BACKGROUND} from '../constants';
 
 import { useLocation } from 'react-router-dom'
 
@@ -14,27 +14,24 @@ export default function Handheld() {
     const id = searchParams.get('id')
 
     const [client,] = useState(getClient(id))
-    const topic = buildGravityTopic(id)
+    const topic = buildTopic(id)
 
     useEffect(() => {
         if (client.connected) {
             return
         }
 
-        client.on('connect', function () {
-            client.subscribe(topic, function (err) {
-                if (err) {
-                    console.log(err)
-                }
-                else if (process.env.REACT_APP_DEBUG) {
-                    console.log(`Subscribed to topic: ${topic}`)
-                }
+        if (process.env.REACT_APP_DEBUG) {
+            client.on('connect', function () {
+                client.subscribe(topic, function (err) {
+                    console.log(err ? err : `Subscribed to topic: ${topic}`)
+                })
             })
-        })
+            client.on('message', function (topic, message) {
+                console.log(`Message on ${topic}: ${message.toString()}`)
+            })
+        }
 
-        client.on('message', function (topic, message) {
-            console.log(message.toString())
-        })
     }, [client.connected])
 
 
@@ -53,7 +50,7 @@ export default function Handheld() {
             <Button variant="warning" size="lg" onClick={mqttPublish(TOGGLE_BACKGROUND)}>
                 Action 1
             </Button>
-            <Button variant="dark" size="lg">
+            <Button variant="dark" size="lg" onClick={mqttPublish(DO_GRAVITY)}>
                 Action 2
             </Button>
         </div >

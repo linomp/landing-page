@@ -6,7 +6,9 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Handheld from './Handheld';
 import Home from './Home';
-import NoPage from './NoPage';
+import React from "react";
+import PhysicsTest from "./PhysicsTest";
+import BlackHole from "./BlackHole";
 
 function App(props) {
 
@@ -14,9 +16,11 @@ function App(props) {
     <div className="App">
       <HashRouter>
         <Routes>
-          <Route exact path="/" element={<Home id={props.id} />} />
+          <Route path="/" element={<Home id={props.id} />} />
           <Route path="/handheld" element={<Handheld />} />
-          <Route path="*" element={<NoPage />} />
+          <Route exact path ="/physics-test" element={<PhysicsTest />} />
+          <Route path="/void" element={<BlackHole />} />
+          <Route path="/*" element={<BlackHole />} />
         </Routes>
       </HashRouter>
     </div>

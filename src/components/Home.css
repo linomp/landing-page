@@ -3,3 +3,9 @@
     color: white !important;
 
 }
+
+/* add a style for links to inherit text style from parent, but color purple*/
+a {
+    color: #80c1ff !important;
+    text-decoration: none;
+}
