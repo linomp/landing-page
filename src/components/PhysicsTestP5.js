@@ -1,5 +1,3 @@
-import {useEffect, useRef} from 'react'
-
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import Sketch from "react-p5";
 
@@ -45,7 +43,7 @@ export default function PhysicsTestP5() {
 
     return (
         <div className="App">
-            <h1>React + p5.js test</h1>
+            <h1>Physics Test (p5.js)</h1>
             <Sketch setup={setup} draw={draw} mouseClicked={mouseClicked}/>
         </div>
     );

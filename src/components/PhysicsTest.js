@@ -55,8 +55,22 @@ export default function PhysicsTest() {
         engine.current.gravity.y = 0;
 
         // add a box in the center
-        const testBox = Bodies.rectangle(width / 2, height / 2, 80, 80);
+        const testBox = Bodies.rectangle(width / 2, height / 4, 80, 80);
         World.add(engine.current.world, [testBox]);
+
+        // create 10 random balls
+        const balls = Array.from({length: 20}, () => {
+            return Bodies.circle(
+                Math.random() * width,
+                Math.random() * height,
+                10 + Math.random() * 30,
+                {
+                    mass: 10,
+                    restitution: 0.9,
+                    friction: 0.005
+                })
+        })
+        World.add(engine.current.world, balls)
     })
 
     const handleActivateGravity = e => {
@@ -81,7 +95,7 @@ export default function PhysicsTest() {
             ref={scene}
             onClick={handleActivateGravity}
         >
-            <h1 className="mt-2">Physics Test</h1>
+            <h1 className="mt-2">Physics Test (Matter.js)</h1>
         </div>
     )
 }
