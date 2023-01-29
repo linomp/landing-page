@@ -1,11 +1,11 @@
 import {useEffect, useRef} from 'react'
-import {Engine, Render, Bodies, World} from 'matter-js'
+import {Engine, Bodies, World, Render} from 'matter-js'
 
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
 // Source: https://www.fabiofranchino.com/blog/how-to-use-matter-js-in-react-functional-component/
 
-export default function PhysicsTest(props) {
+export default function PhysicsTest() {
     const scene = useRef()
     const engine = useRef(Engine.create())
 
@@ -22,12 +22,11 @@ export default function PhysicsTest(props) {
                 width: cw,
                 height: ch,
                 wireframes: false,
-                background: 'transparent'
+                background: 'transparent',
             }
         })
 
         World.add(engine.current.world, [
-            Bodies.rectangle(cw / 2, -10, cw, 20, {isStatic: true}),
             Bodies.rectangle(-10, ch / 2, 20, ch, {isStatic: true}),
             Bodies.rectangle(cw / 2, ch + 10, cw, 20, {isStatic: true}),
             Bodies.rectangle(cw + 10, ch / 2, 20, ch, {isStatic: true})
@@ -35,6 +34,8 @@ export default function PhysicsTest(props) {
 
         Engine.run(engine.current)
         Render.run(render)
+
+        engine.current.gravity.y = 0;
 
         return () => {
             Render.stop(render)
@@ -47,19 +48,22 @@ export default function PhysicsTest(props) {
         }
     }, [])
 
+
     useEffect(() => {
         // Start with no gravity
         console.log('Initial engine.current.gravity.y: ', engine.current.gravity.y)
         engine.current.gravity.y = 0;
 
         // add a box in the center
-        const box2 = Bodies.rectangle(width / 2, height / 2, 80, 80);
-        World.add(engine.current.world, [box2]);
+        const testBox = Bodies.rectangle(width / 2, height / 2, 80, 80);
+        World.add(engine.current.world, [testBox]);
     })
 
     const handleActivateGravity = e => {
+        // Activate gravity
         engine.current.gravity.y = 1;
 
+        // Add a ball at the click location
         const ball = Bodies.circle(
             e.clientX,
             e.clientY,
@@ -74,10 +78,10 @@ export default function PhysicsTest(props) {
 
     return (
         <div
+            ref={scene}
             onClick={handleActivateGravity}
         >
-            <h1>Physics Test</h1>
-            <div ref={scene} style={{width: '100%', height: '100%'}}/>
+            <h1 className="mt-2">Physics Test</h1>
         </div>
     )
 }
