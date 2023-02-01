@@ -1,8 +1,8 @@
-import React from "react";
-import "./BlackHole.css";
+import React from 'react';
 
-// Source: https://codepen.io/jienhuagoo/pen/QPpYbd
-const BlackHole = () => {
+import './BlackHole.css';
+
+export default function BlackHole(){
     return (
         <div className="black-hole-container">
             <div className="l1"></div>
@@ -30,8 +30,5 @@ const BlackHole = () => {
             <div className="l9 rotateAni"></div>
             <div className="l10 rotateAni"></div>
             <div className="l11 rotateAni"></div>
-        </div>
-    );
-};
-
-export default BlackHole;
+        </div>)
+}

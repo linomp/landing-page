@@ -5,7 +5,7 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 
 // Source: https://www.fabiofranchino.com/blog/how-to-use-matter-js-in-react-functional-component/
 
-export default function PhysicsTest() {
+export default function PhysicsTestMatter() {
     const scene = useRef()
     const engine = useRef(Engine.create())
 

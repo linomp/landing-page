@@ -1,4 +1,10 @@
-/* Source: https://codepen.io/jienhuagoo/pen/QPpYbd */
+.black-hole-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    background-color: #0A0603;
+}
 
 .l1 {
     position: absolute;
@@ -358,10 +364,6 @@
     }
 }
 .black-hole-container {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    background-color: #0A0603;
     position: absolute;
     left: 50%;
     top: 50%;

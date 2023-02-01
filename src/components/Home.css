@@ -1,11 +1,8 @@
-.red-bg {
-    background-color: rgb(61, 72, 234) !important;
-    color: white !important;
-
+.Home {
+    text-align: center;
 }
 
-/* add a style for links to inherit text style from parent, but color purple*/
-a {
-    color: #80c1ff !important;
-    text-decoration: none;
+.dark-bg{
+    background-color: rgb(61, 72, 234) !important;
+    color: white !important;
 }

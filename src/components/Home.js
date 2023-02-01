@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 
 import {buildTopic, getClient} from '../modules/mqtt_utils';
-import {buildUrl} from '../modules/browser_utils';
+import {buildHandheldUrl} from '../modules/browser_utils';
 
 import {Col, Row} from 'react-bootstrap';
 
@@ -12,10 +12,9 @@ import {DO_GRAVITY, TOGGLE_BACKGROUND} from '../constants';
 import Lyrics from './Lyrics';
 
 import './Home.css';
-import {AiFillGithub} from "react-icons/ai";
 
-let size = 256
-let qrWidth = 80
+let qrSize = 256
+let qrMaxWidth = 80
 
 export default function Home({id}) {
 
@@ -65,19 +64,19 @@ export default function Home({id}) {
     }
 
     return (
-        <div className={`${darkBG ? "red-bg" : ""}`}>
+        <div className={`Home ${darkBG ? "dark-bg" : ""}`}>
             <Row>
                 {gravity && <div className="gravity">Gravity goes here</div>}
                 <Col>
                     <Lyrics
-                        children={(<div style={{height: "auto", margin: "0 auto", maxWidth: qrWidth, width: "100%"}}>
+                        children={(<div style={{height: "auto", margin: "0 auto", maxWidth: qrMaxWidth, width: "100%"}}>
                             <QRCode
-                                size={size}
+                                size={qrSize}
                                 style={{height: "auto", maxWidth: "100%", width: "100%"}}
                                 bgColor={darkBG ? "#000000" : "#FFFFFF"}
                                 fgColor={darkBG ? "#FFFFFF" : "#000000"}
-                                value={buildUrl(id)}
-                                viewBox={`0 0 ${size} ${size}`}
+                                value={buildHandheldUrl(id)}
+                                viewBox={`0 0 ${qrSize} ${qrSize}`}
                                 className="mb-4"
                             />
                         </div>)}/>

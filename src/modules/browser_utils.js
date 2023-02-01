@@ -1,12 +1,6 @@
-export function buildUrl(id) {
-
-    let url = window.location.href + "#/handheld?id=" + id
-
-    if (process.env.REACT_APP_DEBUG) {
-        console.log("Handheld URL: " + url)
-    }
+export function buildHandheldUrl(id) {
+    let url = window.location.href + "handheld?id=" + id
+    console.log("Handheld URL: " + url)
 
     return url;
 }
-
-
