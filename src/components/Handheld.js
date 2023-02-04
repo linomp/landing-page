@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Button } from 'react-bootstrap'
 
 import { getClient, buildTopic } from '../modules/mqtt_utils';
 
 import {DO_GRAVITY, TOGGLE_BACKGROUND} from '../constants';
 
 import { useLocation } from 'react-router-dom'
+
+import './Handheld.css'
 
 export default function Handheld() {
 
@@ -46,13 +47,13 @@ export default function Handheld() {
     }
 
     return (
-        <div className="mt-4 p-5 d-grid gap-3">
-            <Button variant="warning" size="lg" onClick={mqttPublish(TOGGLE_BACKGROUND)}>
+        <div className="handheld">
+            <button onClick={mqttPublish(TOGGLE_BACKGROUND)}>
                 Action 1
-            </Button>
-            <Button variant="dark" size="lg" onClick={mqttPublish(DO_GRAVITY)}>
+            </button>
+            <button onClick={mqttPublish(DO_GRAVITY)}>
                 Action 2
-            </Button>
+            </button>
         </div >
     )
 }

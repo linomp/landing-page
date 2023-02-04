@@ -46,7 +46,7 @@ export default function Lyrics(props) {
 
     return (
         <div>
-            <h1 className='mt-5 mb-3'>{props.title || defaultTitle}</h1>
+            <h1>{props.title || defaultTitle}</h1>
             {props.children}
             {props.lyrics || defaultLyrics}
         </div>

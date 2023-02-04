@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.css';
-
 import reportWebVitals from './reportWebVitals';
 import uuid from 'react-uuid';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
@@ -13,6 +10,8 @@ import Handheld from "./components/Handheld";
 import PhysicsTestP5 from "./components/PhysicsTestP5";
 import PhysicsTestMatter from "./components/PhysicsTestMatter";
 import BlackHole from "./components/BlackHole";
+
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

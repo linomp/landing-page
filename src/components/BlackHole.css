@@ -1,11 +1,15 @@
-.black-hole-container{
+.black-hole-container {
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
     margin: 0;
-    background-color: #0A0603;
+    background-color: #0A0603 !important;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-animation: rotateRoundAni 30s infinite linear;
 }
-
 .l1 {
     position: absolute;
     left: 50%;
@@ -113,7 +117,6 @@
     left: 50%;
     top: 50%;
     transform-origin: center;
-    transform: translateX(-50%) translateY(-50%);
     width: 30px;
     height: 40px;
     background-color: #000;
@@ -297,7 +300,6 @@
     left: 50%;
     top: 50%;
     transform-origin: center;
-    transform: translateX(-50%) translateY(-50%);
     width: 50px;
     height: 70px;
     background-color: #521003;
@@ -311,7 +313,6 @@
     left: 50%;
     top: 50%;
     transform-origin: center;
-    transform: translateX(-50%) translateY(-50%);
     width: 50px;
     height: 70px;
     background-color: #220003;
@@ -329,7 +330,6 @@
     left: 50%;
     top: 50%;
     transform-origin: center;
-    transform: translateX(-50%) translateY(-50%);
     color: white;
     font-size: 24px;
     transform: translateX(-50%) translateY(-180px);
@@ -362,12 +362,4 @@
     to {
         transform: translateX(-160px) translateY(30px);
     }
-}
-.black-hole-container {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform-origin: center;
-    transform: translateX(-50%) translateY(-50%);
-    -webkit-animation: rotateRoundAni 30s infinite linear;
 }
