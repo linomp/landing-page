@@ -54,7 +54,6 @@ export default function Lyrics(props) {
 }
 
 
-// Add proptypes with fields children, title and lyrics
 Lyrics.propTypes = {
     children: PropTypes.node,
     title: PropTypes.string,

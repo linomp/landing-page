@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState} from 'react'
 
-import { getClient, buildTopic } from '../modules/mqtt_utils';
+import {buildTopic, getClient} from '../modules/mqtt_utils';
 
-import {DO_GRAVITY, TOGGLE_BACKGROUND} from '../constants';
+import {DO_REDIRECT, TOGGLE_BACKGROUND} from '../constants';
 
-import { useLocation } from 'react-router-dom'
-
-import './Handheld.css'
+import {useLocation} from 'react-router-dom'
 
 export default function Handheld() {
 
@@ -51,9 +49,9 @@ export default function Handheld() {
             <button onClick={mqttPublish(TOGGLE_BACKGROUND)}>
                 Action 1
             </button>
-            <button onClick={mqttPublish(DO_GRAVITY)}>
+            <button onClick={mqttPublish(DO_REDIRECT)}>
                 Action 2
             </button>
-        </div >
+        </div>
     )
 }

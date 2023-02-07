@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from 'react'
 
+import {useNavigate} from "react-router-dom";
+
 import {buildTopic, getClient} from '../modules/mqtt_utils';
 import {buildHandheldUrl} from '../modules/browser_utils';
 
 import QRCode from "react-qr-code";
 
-import {DO_GRAVITY, TOGGLE_BACKGROUND} from '../constants';
+import {DO_REDIRECT, matterTestPath, TOGGLE_BACKGROUND} from '../constants';
 
 import Lyrics from './Lyrics';
-
-import './Home.css';
 
 let qrSize = 256
 let qrMaxWidth = 80
@@ -18,7 +18,8 @@ export default function Home({id}) {
 
     const [client,] = useState(getClient(id))
     const [darkBG, setDarkBG] = useState(false)
-    const [gravity, setGravity] = useState(false)
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (client.connected) {
@@ -52,29 +53,28 @@ export default function Home({id}) {
             switch (message.toString()) {
                 case TOGGLE_BACKGROUND:
                     setDarkBG(!darkBG)
-                    setGravity(false)
                     break;
-                case DO_GRAVITY:
-                    setGravity(!gravity)
+                case DO_REDIRECT:
+                    navigate(matterTestPath)
                     break;
+                default:
+                    console.log("Unknown message", message.toString())
             }
         })
     }
 
-    return (
-        <div className={`home ${darkBG ? "dark-bg" : ""}`}>
-            {gravity && <div className="gravity">Gravity goes here</div>}
-            <Lyrics
-                children={(<div style={{height: "auto", margin: "0 auto", maxWidth: qrMaxWidth, width: "100%"}}>
-                    <QRCode
-                        size={qrSize}
-                        style={{height: "auto", maxWidth: "100%", width: "100%"}}
-                        bgColor={darkBG ? "#000000" : "#FFFFFF"}
-                        fgColor={darkBG ? "#FFFFFF" : "#000000"}
-                        value={buildHandheldUrl(id)}
-                        viewBox={`0 0 ${qrSize} ${qrSize}`}
-                    />
-                </div>)}/>
-        </div>
-    );
+    return (<div className={`home ${darkBG ? "modo-caos" : ""}`}>
+        {darkBG && <div className="modo-caos-background"/>}
+        <Lyrics
+            children={(<div style={{height: "auto", margin: "0 auto", maxWidth: qrMaxWidth, width: "100%"}}>
+                <QRCode
+                    size={qrSize}
+                    style={{height: "auto", maxWidth: "100%", width: "100%"}}
+                    bgColor={darkBG ? "#000000" : "#FFFFFF"}
+                    fgColor={darkBG ? "#FFFFFF" : "#000000"}
+                    value={buildHandheldUrl(id)}
+                    viewBox={`0 0 ${qrSize} ${qrSize}`}
+                />
+            </div>)}/>
+    </div>);
 }
