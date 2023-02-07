@@ -1,9 +1,5 @@
 /*** BASE STYLES ***/
 
-/*
-Source: https://blog.logrocket.com/what-should-modern-css-boilerplate-look-like/#dont-reset-margins
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@350&display=swap');
 
 * {
@@ -11,43 +7,13 @@ Source: https://blog.logrocket.com/what-should-modern-css-boilerplate-look-like/
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    color: black;
-}
-
-
+/* Make root item occupy whole screen and define it as a flex container for all other elements in the app */
 #root {
     height: 100vh;
     display: flex;
     flex-direction: column
 }
 
-/* Force images to behave */
-img {
-    display: block;
-    max-width: 100%;
-}
-
-/* Reset (most) lists */
-menu:not(article menu),
-ol:not(article ol),
-ul:not(article ul) {
-    list-style: none;
-}
-
-menu,
-ol,
-ul {
-    padding-left: 0;
-}
-
-article ol,
-article ul {
-    list-style-position: inside;
-}
 
 /* Enable smooth scrolling */
 @media (prefers-reduced-motion: no-preference) {
@@ -108,7 +74,7 @@ summary,
     width: 100%;
     padding: 1em;
     margin-top: 1em;
-    font-size: 1em;
+    font-size: 1.2em;
     border: 1px solid #000000;
     border-radius: 0.25em;
 }
