@@ -76,5 +76,18 @@ export default function Home({id}) {
                     viewBox={`0 0 ${qrSize} ${qrSize}`}
                 />
             </div>)}/>
+        <div className="home__footer">
+            <div className="can-can-bc">
+                <a className={`${darkBG ? "modo-caos" : ""}`} href="https://www.youtube.com/@pichudequito/videos">Band:
+                    Can Can
+                    (Ecuador)</a>
+            </div>
+            <div className="github-link">
+                <a className={`${darkBG ? "modo-caos" : ""}`} href="https://github.com/linomp/pointless"
+                   target="_blank"><i
+                    className="fab fa-github"></i></a>
+            </div>
+        </div>
+
     </div>);
 }
