@@ -68,6 +68,7 @@ export default function Home({id}) {
         <Lyrics
             children={(<div style={{height: "auto", margin: "0 auto", maxWidth: qrMaxWidth, width: "100%"}}>
                 <QRCode
+                    onClick={() => setDarkBG(!darkBG)}
                     size={qrSize}
                     style={{height: "auto", maxWidth: "100%", width: "100%"}}
                     bgColor={darkBG ? "#000000" : "#FFFFFF"}
