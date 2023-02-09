@@ -79,7 +79,8 @@ export default function Home({id}) {
             </div>)}/>
         <div className="home__footer">
             <div className="can-can-bc">
-                <a className={`${darkBG ? "modo-caos" : ""}`} href="https://www.youtube.com/@pichudequito/videos">Band:
+                <a className={`${darkBG ? "modo-caos" : ""}`} href="https://www.youtube.com/@pichudequito/videos"
+                   target="_blank">Band:
                     Can Can
                     (Ecuador)</a>
             </div>
