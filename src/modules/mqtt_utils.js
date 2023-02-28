@@ -1,11 +1,21 @@
-const mqtt = require('mqtt/dist/mqtt')
-
 export function getClient() {
 
-    const client = mqtt.connect(process.env.REACT_APP_MQTT_HOST);
+    //const client = connect(import.meta.env.VITE_MQTT_HOST);
 
-    if (process.env.REACT_APP_DEBUG) {
-        console.log("MQTT host: " + process.env.REACT_APP_MQTT_HOST)
+    const client = {
+        on: (event, callback) => {
+            console.log("on: " + event)
+        },
+        publish: (topic, message) => {
+            console.log("publish: " + topic + " " + message)
+        },
+        subscribe: () => {
+            console.log("subscribe")
+        }
+    }
+
+    if (import.meta.env.VITE_DEBUG) {
+        console.log("MQTT host: " + import.meta.env.VITE_MQTT_HOST)
     }
 
     return client

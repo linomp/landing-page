@@ -20,7 +20,7 @@ export default function Handheld() {
             return
         }
 
-        if (process.env.REACT_APP_DEBUG) {
+        if (import.meta.env.VITE_DEBUG) {
             client.on('connect', function () {
                 client.subscribe(topic, function (err) {
                     console.log(err ? err : `Subscribed to topic: ${topic}`)
