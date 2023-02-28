@@ -32,7 +32,7 @@ export default function Home({id}) {
             client.subscribe(topic, function (err) {
                 if (err) {
                     console.log(err)
-                } else if (process.env.REACT_APP_DEBUG) {
+                } else if (import.meta.env.VITE_DEBUG) {
                     console.log(`Subscribed to topic: ${topic}`)
                 }
             })
@@ -40,7 +40,7 @@ export default function Home({id}) {
     })
 
     useEffect(() => {
-        const server = process.env.REACT_APP_BACKEND_URL
+        const server = import.meta.env.VITE_BACKEND_URL
         fetch(`${server}/health`)
             .then(response => response.json())
             .then(data => console.log("Server healthcheck OK", server, data))
