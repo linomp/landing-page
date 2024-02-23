@@ -85,7 +85,7 @@ export default function Home({id}) {
                     (Ecuador)</a>
             </div>
             <div className="github-link">
-                <a className={`${darkBG ? "modo-caos" : ""}`} href="https://github.com/linomp/pointless"
+                <a className={`${darkBG ? "modo-caos" : ""}`} href="https://github.com/linomp/svelte-qr-mqtt"
                    target="_blank"><i
                     className="fab fa-github"></i></a>
             </div>
