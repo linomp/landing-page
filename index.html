@@ -2,39 +2,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <meta content="#000000" name="theme-color"/>
-    <meta content="pointless app" name="description"/>
-    <link href="/logo192.png" rel="apple-touch-icon"/>
-    <link href="/manifest.json" rel="manifest"/>
-    <title>p o i n t l e s s</title>
-    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-          referrerpolicy="no-referrer" rel="stylesheet">
-    <!-- Start Single Page Apps for GitHub Pages -->
-    <script type="text/javascript">
-        // https://github.com/rafgraph/spa-github-pages
-        (function (l) {
-            if (l.search[1] === '/') {
-                var decoded = l.search.slice(1).split('&').map(function (s) {
-                    return s.replace(/~and~/g, '&')
-                }).join('?');
-                window.history.replaceState(null, null,
-                    l.pathname.slice(0, -1) + decoded + l.hash
-                );
-            }
-        }(window.location))
-    </script>
-    <!-- End Single Page Apps for GitHub Pages -->
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n o p a s a r a n</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-<noscript>You need to enable JavaScript to run this app.</noscript>
-<div id="root"></div>
-<script src="/src/main.jsx" type="module"></script>
+<body class="index">
+    <p class="title">
+        <audio id="player" src="media/the_descent.mp3"></audio>
+        <button onclick="document.getElementById('player').play()"> <span class="song" title="click me">Infinity
+                Frequencies - Between
+                Two Worlds</span></button>
+    </p>
+    <div class="content">
+        <img src="./img/river_lj.jpg" alt="">
+        <img src="./img/shico.jpg" alt="">
+        <img src="./img/reserv.jpg" alt="">
+        <img src="./img/synth.jpg" alt="">
+        <img src="./img/beach.jpg" alt="">
+        <img src="./img/sevish.jpg" alt="">
+        <img src="./img/beach_2.jpg" alt="">
+        <img src="./img/shico_2.jpg" alt="">
+        <img src="./img/fin.jpg" alt="">
+    </div>
 </body>
 
 </html>
