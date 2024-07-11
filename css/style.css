@@ -51,4 +51,45 @@ img {
 .content {
     max-width: 50%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content img {
+    width: 80%;
+    opacity: 0;
+    animation: slide-in 1s forwards;
+}
+
+.content img:nth-child(odd) {
+    animation-name: slide-in-left;
+}
+
+.content img:nth-child(even) {
+    animation-name: slide-in-right;
+}
+
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
