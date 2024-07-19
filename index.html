@@ -14,7 +14,7 @@
 <body class="index">
 
     <p class="title">
-        <button onclick="document.getElementById('player').play()">
+        <button>
             <span class="song" title="click me">
                 Infinity Frequencies - Between Two Worlds
             </span>
@@ -37,7 +37,7 @@
 <script>
     (function () {
         var audio = new Audio()
-        audio.autoplay = true;
+        audio.autoplay = false;
         audio.loop = true;
         audio.type = 'audio/mpeg';
         audio.src = './media/the_descent_clip.mp3';
