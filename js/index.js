@@ -11,8 +11,6 @@ const ENABLE_AUDIO = true;
     window.addEventListener('click', () => {
         if (audio.paused) {
             audio.play();
-        } else {
-            audio.pause();
         }
     });
 })();
