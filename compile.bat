@@ -1,1 +1,1 @@
-tailwindcss -i input.css -o output.css --minify
+tailwindcss -i ./css/input.css -o ./css/output.css --minify
