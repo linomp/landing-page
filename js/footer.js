@@ -7,7 +7,7 @@ footerTemplate.innerHTML = `
     <footer class="w-full border-t bg-black pb-12 text-white">
         <div class="w-full container mx-auto flex flex-col items-center">
             <div class="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
-                <a href="/index.html" class="uppercase px-3">About me</a>
+                <a href="/index.html" class="uppercase px-3">About</a>
                 <a href="https://www.youtube.com/@thisaintmyrealname1/featured" class="uppercase px-3"
                     target="_blank">videos</a>
                 <a href="#" class="uppercase px-3">Contact</a>
