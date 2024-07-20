@@ -9,5 +9,5 @@
 }
 
 .content-wrapper {
-    min-height: calc(100vh - 20px);
+    min-height: calc(0.5vh);
 }
