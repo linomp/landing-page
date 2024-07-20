@@ -1,1 +1,1 @@
-tailwindcss -i ./css/input.css -o ./css/output.css --minify --watch
+tailwindcss -i ./css/input.css -o ./css/output.css --watch

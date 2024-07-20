@@ -2,31 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes slide-in-left {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
+@layer base {
+    html {
+        font-family: "Roboto Mono";
     }
 }
 
-@keyframes slide-in-right {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.gallery img:nth-child(odd) {
-    animation: slide-in-left 1s forwards;
-}
-
-.gallery img:nth-child(even) {
-    animation: slide-in-right 1s forwards;
+.content-wrapper {
+    min-height: calc(100vh - 20px);
 }
