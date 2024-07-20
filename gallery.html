@@ -8,56 +8,23 @@
     <title>p o i n t l e s s</title>
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-
-    <!-- TODO: replace with raw svgs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
-        integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="./css/output.css">
-    <script src="./js/music.js"></script>
-    <script src="./js/nav.js"></script>
-    <script src="./js/header.js"></script>
-    <script src="./js/footer.js"></script>
+    <script src="./js/nav.js" type="text/javascript"></script>
+    <script src="./js/header.js" type="text/javascript"></script>
+    <script src="./js/footer.js" type="text/javascript"></script>
+    <script src="./js/music.js" type="text/javascript"></script>
 </head>
 
 <body class="index bg-black bg-cover bg-repeat"
     style="width: 100%; background-image: url('../img/usfq_old.jpg'); background-size: 50%;">
 
-    <nav class="w-full py-4 bg-black shadow">
-        <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
-            <nav>
-                <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
-                    <li><a href="/index.html" class="uppercase px-3">home</a></li>
-                    <li><a href="#" class="uppercase px-3">code</a></li>
-                    <li><a onmousedown="playClip()" href="#" class="uppercase px-3">music</a></li>
-                    <li><a href="/gallery.html" class="uppercase px-3">gallery</a></li>
-                </ul>
-            </nav>
-            <div class="flex items-center text-lg no-underline text-white pr-6">
-                <a class="" href="https://github.com/linomp" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a class="pl-6" href="https://www.linkedin.com/in/lino-mp/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-        </div>
-    </nav>
-    <header class="w-full container mx-auto">
-        <div class="flex flex-col items-center py-12">
-            <a class="text-medium  font-bold text-yellow-200 hover:text-yellow-50 text-5xl" href="#">
-                { }
-            </a>
-            <p class="text-small text-white mt-4">
-                Between two worlds
-            </p>
-        </div>
-    </header>
+    <nav-component></nav-component>
+
+    <header-component></header-component>
 
     <div class="container mx-auto flex flex-wrap py-6">
         <section class="w-full md:w-3/3 flex flex-col items-center px-3">
@@ -66,18 +33,15 @@
                     <img src="./img/sevish.jpg" alt="">
                 </a>
                 <div class="max-w-screen-md bg-black flex flex-col justify-start p-6">
+                    <!-- <a href="#" class="text-blue-200 text-sm font-bold uppercase pb-4">Lorem ipsum</a> -->
                     <a href="#" class="text-white text-3xl font-bold hover:text-gray-700 pb-4">UIO</a>
                     <p href="#" class="text-white text-sm pb-3">
                         Quito - Ecuador, 2018
                     </p>
-                    <a href="#" class="text-white pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus
-                        quis porta
-                        dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit
-                        amet
-                        posuere magna..</a>
+                    <!-- <a href="#" class="text-white pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vivamus quis porta dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet posuere magna..</a>
                     <a href="#" class="uppercase text-yellow-200 hover:text-yellow-50">Continue Reading <i
-                            class="fas fa-arrow-right"></i></a>
+                            class="fas fa-arrow-right"></i></a> -->
                 </div>
             </article>
 
@@ -86,17 +50,10 @@
                     <img src="./img/beach.jpg">
                 </a>
                 <div class="max-w-screen-md bg-black flex flex-col justify-start p-6">
-                    <!-- <a href="#" class="text-blue-200 text-sm font-bold uppercase pb-4">Playa</a> -->
                     <a href="#" class="text-white text-3xl font-bold hover:text-gray-700 pb-4">Base</a>
                     <p href="#" class="text-white text-sm pb-3">
                         Jaramijó - Ecuador, 2018
                     </p>
-                    <a href="#" class="text-white pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        quis porta
-                        dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet
-                        posuere magna..</a>
-                    <a href="#" class="uppercase text-yellow-200 hover:text-yellow-50">Continue Reading <i
-                            class="fas fa-arrow-right"></i></a>
                 </div>
             </article>
 
@@ -105,17 +62,10 @@
                     <img src="./img/shico.jpg">
                 </a>
                 <div class="max-w-screen-md bg-black flex flex-col justify-start p-6">
-                    <!-- <a href="#" class="text-blue-200 text-sm font-bold uppercase pb-4">Casa</a> -->
                     <a href="#" class="text-white text-3xl font-bold hover:text-gray-700 pb-4">Shico</a>
                     <p href="#" class="text-white text-sm pb-3">
                         Manta - Ecuador, 2020
                     </p>
-                    <a href="#" class="text-white pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        quis porta
-                        dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet
-                        posuere magna..</a>
-                    <a href="#" class="uppercase text-yellow-200 hover:text-yellow-50">Continue Reading <i
-                            class="fas fa-arrow-right"></i></a>
                 </div>
             </article>
 
@@ -124,17 +74,10 @@
                     <img src="./img/orquesta.jpeg">
                 </a>
                 <div class="max-w-screen-md bg-black flex flex-col justify-start p-6">
-                    <!-- <a href="#" class="text-blue-200 text-sm font-bold uppercase pb-4">Casa</a> -->
                     <a href="#" class="text-white text-3xl font-bold hover:text-gray-700 pb-4">Orquesta</a>
                     <p href="#" class="text-white text-sm pb-3">
                         Manta - Ecuador, 2015
                     </p>
-                    <a href="#" class="text-white pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        quis porta
-                        dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet
-                        posuere magna..</a>
-                    <a href="#" class="uppercase text-yellow-200 hover:text-yellow-50">Continue Reading <i
-                            class="fas fa-arrow-right"></i></a>
                 </div>
             </article>
 
@@ -143,17 +86,10 @@
                     <img src="./img/reserv.jpg">
                 </a>
                 <div class="max-w-screen-md bg-black flex flex-col justify-start p-6">
-                    <!-- <a href="#" class="text-blue-200 text-sm font-bold uppercase pb-4">Casa</a> -->
                     <a href="#" class="text-white text-3xl font-bold hover:text-gray-700 pb-4">Reservorio</a>
                     <p href="#" class="text-white text-sm pb-3">
                         Quito - Ecuador, 2019
                     </p>
-                    <a href="#" class="text-white pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        quis porta
-                        dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet
-                        posuere magna..</a>
-                    <a href="#" class="uppercase text-yellow-200 hover:text-yellow-50">Continue Reading <i
-                            class="fas fa-arrow-right"></i></a>
                 </div>
             </article>
 
@@ -162,17 +98,10 @@
                     <img src="./img/synth.jpg">
                 </a>
                 <div class="max-w-screen-md bg-black flex flex-col justify-start p-6">
-                    <!-- <a href="#" class="text-blue-200 text-sm font-bold uppercase pb-4">Casa</a> -->
                     <a href="#" class="text-white text-3xl font-bold hover:text-gray-700 pb-4">Outrun</a>
                     <p href="#" class="text-white text-sm pb-3">
                         Quito - Ecuador, 2018
                     </p>
-                    <a href="#" class="text-white pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        quis porta
-                        dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet
-                        posuere magna..</a>
-                    <a href="#" class="uppercase text-yellow-200 hover:text-yellow-50">Continue Reading <i
-                            class="fas fa-arrow-right"></i></a>
                 </div>
             </article>
 
@@ -181,33 +110,16 @@
                     <img src="./img/shico_2.jpg">
                 </a>
                 <div class="max-w-screen-md bg-black flex flex-col justify-start p-6">
-                    <!-- <a href="#" class="text-blue-200 text-sm font-bold uppercase pb-4">Casa</a> -->
                     <a href="#" class="text-white text-3xl font-bold hover:text-gray-700 pb-4">Enano</a>
                     <p href="#" class="text-white text-sm pb-3">
                         Manta - Ecuador, 2018
                     </p>
-                    <a href="#" class="text-white pb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                        quis porta
-                        dui. Ut eu iaculis massa. Sed ornare ligula lacus, quis iaculis dui porta volutpat. In sit amet
-                        posuere magna..</a>
-                    <a href="#" class="uppercase text-yellow-200 hover:text-yellow-50">Continue Reading <i
-                            class="fas fa-arrow-right"></i></a>
                 </div>
             </article>
         </section>
     </div>
 
-    <footer class="w-full border-t bg-black pb-12 text-white">
-        <div class="w-full container mx-auto flex flex-col items-center">
-            <div class="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
-                <a href="/index.html" class="uppercase px-3">About</a>
-                <a href="https://www.youtube.com/@thisaintmyrealname1/featured" class="uppercase px-3"
-                    target="_blank">videos</a>
-                <a href="#" class="uppercase px-3">Contact</a>
-            </div>
-            <div class="lowercase pb-6">&copy; 2024 // p o i n t l e s s</div>
-        </div>
-    </footer>
+    <footer-component></footer-component>
 
 </body>
 
