@@ -7,7 +7,3 @@
         font-family: "Roboto Mono";
     }
 }
-
-.content-wrapper {
-    min-height: calc(100vh - 20px);
-}
