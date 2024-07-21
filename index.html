@@ -17,7 +17,7 @@
 </head>
 
 <body class="index bg-black bg-cover bg-repeat font-roboto"
-    style="width: 100%; background-image: url('../img/usfq_old.jpg'); background-size: 50%;">
+    style="width: 100%; background-image: url('../img/webp/usfq_old.webp'); background-size: 50%;">
 
     <nav class="w-full py-4 bg-black shadow">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
@@ -75,12 +75,12 @@
         </div>
     </header>
 
-    <div class="content-wrapper">
+    <div class="container mx-auto">
         <div class="bio w-full flex flex-col items-center px-4 shadow my-4">
             <div class=" bg-black flex flex-col justify-start p-6 text-white">
                 <p class="mb-3">
                     Hi. I'm Lino, a software dev from
-                    <a class="underline text-yellow-200 hover:text-purple-400"
+                    <a class="text-yellow-200 hover:text-purple-400"
                         href="https://youtu.be/gPguGmiKBr4?si=bRPWR5scA8vgk5TX" target="_blank">
                         Ecuador
                     </a>
@@ -90,15 +90,13 @@
                     brutal/experimental music and my cats.
                 </p>
                 <p class="mb-3">
-                    I'm not attached to any particular web stack, but I currently use .NET Core + Angular (for work)
-                    and FastAPI + Svelte (for fun).
+                    Ever since I left my hometown for studies in 2013, I've found myself living <span
+                        class="italic text-yellow-200" onmousedown="playClip()">between two worlds</span>, and it
+                    remains
+                    true to this day, geographically, mentally and professionally.
                 </p>
-                <p>
-                    Besides programming, my favorite activities are: blasting metal albums, blasting
-                    vaporwave albums, blasting dungeon synth albums, blasting post-punk albums, blasting
-                    d-beat/crust punk albums, practicing blast beats, prioritizing social interactions related to
-                    metal or programming, and making music under the name {Inserte Pseudónimo Aquí}.
-                </p>
+                <p> This website is a mix of nostalgia, programming projects, music projects & liminal places that
+                    attempts to capture that sensation.</p>
             </div>
         </div>
 
@@ -148,7 +146,7 @@
         </div>
     </div>
 
-    <footer class="w-full border-t bg-black pb-12 text-white">
+    <footer class="w-full sticky top-[100vh] border-t bg-black pb-4 text-white ">
         <div class="w-full container mx-auto flex flex-col items-center">
             <div class="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
                 <a href="/index.html" class="uppercase px-3">About</a>
