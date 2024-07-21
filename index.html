@@ -24,13 +24,13 @@
             <nav>
                 <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
                     <li><a href="/index.html" class="uppercase px-3">home</a></li>
-                    <li><a href="#" class="uppercase px-3">code</a></li>
-                    <li><a onmousedown="playClip()" href="#" class="uppercase px-3">music</a></li>
+                    <li><a title="Coming soon" href="#" class="uppercase px-3">code</a></li>
+                    <li><a title="Coming soon" href="#" class="uppercase px-3">music</a></li>
                     <li><a href="/gallery.html" class="uppercase px-3">gallery</a></li>
                 </ul>
             </nav>
             <div class="flex items-center text-lg no-underline text-white pr-6">
-                <a class="" href="https://github.com/linomp" target="_blank">
+                <a href="https://github.com/linomp" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
                         viewBox="0,0,256,256">
                         <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
@@ -82,12 +82,15 @@
                     Hi. I'm Lino, a software dev from
                     <a class="text-yellow-200 hover:text-purple-400"
                         href="https://youtu.be/gPguGmiKBr4?si=bRPWR5scA8vgk5TX" target="_blank">
-                        Ecuador
+                        Manta, Ecuador.
                     </a>
                 </p>
                 <p class="mb-3">
                     Ever since I left my hometown for studies in 2013, I've found myself living <span
-                        class="italic text-yellow-200" onmousedown="playClip()">between two worlds</span>, and it
+                        class="italic text-yellow-200 cursor-pointer" onmousedown="playClip()"
+                        title="Signalwave album by Infinity Frequencies, 2018">between
+                        two
+                        worlds</span>, and it
                     remains
                     true to this day.
                 </p>
@@ -97,43 +100,78 @@
 
         <div class="projects grid lg:grid-cols-3 lg:gap-8 md:grid-cols-3 md:gap-4 sm:grid-cols-1 sm:gap-1 px-4 mb-5 ">
             <div class="flex flex-col shadow my-4 ">
-                <img src="./img/sevish.jpg" class="min-w-full">
+                <img src="./img/webp/pdmgame.webp" class="min-w-full">
                 <div class=" bg-black flex flex-col justify-start p-6">
-                    <a href="#" class="text-blue-200 text-sm font-bold uppercase pb-4">Latest projects</a>
-                    <a href="#" class="text-white text-3xl font-bold hover:text-gray-700 pb-4">Title</a>
+                    <a href="#" title="Dev projects section coming soon"
+                        class="text-blue-200 text-sm font-bold uppercase pb-4">Dev projects</a>
+                    <a href="https://github.com/linomp/pdm-game"
+                        class="text-white text-3xl font-bold hover:text-purple-400 pb-4">The Predictive
+                        Maintenance Game</a>
                     <p class="text-white text-sm pb-3">
-                        subtitle
+                        Released in July 2024
                     </p>
-                    <a href="#" class="text-white pb-6">Description...</a>
-                    <a href="#" class="uppercase text-yellow-200 hover:text-yellow-50">Try it out ->
+                    <div class="text-white pb-6">
+                        <p class="mb-3">A simulation game inspired by the likes of Game Dev Tycoon, where your goal is
+                            to
+                            maximize profit
+                            &
+                            lifespan of your machine, with sensors & predictive analytics at your disposal.</p>
+                        <p>Built with FastAPI & Svelte. Uses MQTT and a regression model under the hood.</p>
+                    </div>
+                    <a href="https://app.pdmgame.xmp.systems/" target="_blank"
+                        class="uppercase text-yellow-200 hover:text-yellow-50">Try game
+                    </a>
+                    <a href="https://app.pdmgame.xmp.systems/" target="_blank"
+                        class="uppercase text-yellow-200 hover:text-yellow-50">Check repo
                     </a>
                 </div>
             </div>
 
             <div class="flex flex-col shadow my-4">
-                <img src="./img/sevish.jpg" class="min-w-full">
+                <img src="./img/grind.jpg" class="min-w-full">
                 <div class=" bg-black flex flex-col justify-start p-6">
-                    <a href="#" class="text-blue-200 text-sm font-bold uppercase pb-4">Latest projects</a>
-                    <a href="#" class="text-white text-3xl font-bold hover:text-gray-700 pb-4">Title</a>
+                    <a href="#" title="Music section coming soon"
+                        class="text-blue-200 text-sm font-bold uppercase pb-4">Music Demos</a>
+                    <a href="https://open.spotify.com/intl-es/track/6MwtXBd40MTGYP91q0ioid?si=29cb05bc21a64d87"
+                        class="text-white text-3xl font-bold hover:text-purple-400 pb-4">Masakrador -
+                        Condenada</a>
                     <p class="text-white text-sm pb-3">
-                        subtitle
+                        Recorded DIY
+                        in Manta, early 2020
                     </p>
-                    <a href="#" class="text-white pb-6">Description...</a>
-                    <a href="#" class="uppercase text-yellow-200 hover:text-yellow-50">Try it out ->
+                    <a href="#" class="text-white pb-6">First single from the grindcore duo formed with my cousin
+                        Jorge
+                        (guitar +
+                        vocals).</a>
+                    <a href="https://open.spotify.com/intl-es/track/6MwtXBd40MTGYP91q0ioid?si=29cb05bc21a64d87"
+                        class="uppercase text-yellow-200 hover:text-yellow-50">Listen on Spotify
                     </a>
                 </div>
             </div>
 
             <div class="flex flex-col shadow my-4 ">
-                <img src="./img/sevish.jpg" class="min-w-full">
+                <img src="./img/lucta.jpg" class="min-w-full">
                 <div class=" bg-black flex flex-col justify-start p-6">
-                    <a href="#" class="text-blue-200 text-sm font-bold uppercase pb-4">Latest projects</a>
-                    <a href="#" class="text-white text-3xl font-bold hover:text-gray-700 pb-4">Title</a>
+                    <a href="#" title="Music section coming soon"
+                        class="text-blue-200 text-sm font-bold uppercase pb-4">Recommended albums</a>
+                    <a href="#" class="text-white text-3xl font-bold hover:text-purple-400 pb-4">Eterna Lotta by
+                        Lucta</a>
                     <p class="text-white text-sm pb-3">
-                        subtitle
+                        Released in June 2024 on Static Shock Records
                     </p>
-                    <a href="#" class="text-white pb-6">Description...</a>
-                    <a href="#" class="uppercase text-yellow-200 hover:text-yellow-50">Try it out ->
+                    <div href="#" class="text-white pb-6">
+                        <p class="mb-3">Hardcore punk from Milan with dark elements, wet + distorted
+                            guitars, fast drums and explosive vocals.</p>
+                        <p class="mb-3">Excellent production on this one, they've really cemented their sonic identity.
+                        </p>
+                        <p>Definitely a
+                            step-up
+                            from their also great album "Black magic punk" from
+                            2018.
+                        </p>
+                    </div>
+                    <a href="https://luctapunk.bandcamp.com/album/eterna-lotta-2" target="_blank"
+                        class="uppercase text-yellow-200 hover:text-yellow-50">Listen on Bandcamp
                     </a>
                 </div>
             </div>
@@ -145,9 +183,9 @@
         <div class="w-full container mx-auto flex flex-col items-center">
             <div class="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
                 <a href="/index.html" class="uppercase px-3">Home</a>
+                <a href="https://github.com/linomp/pointless" class="uppercase px-3" target="_blank">Source</a>
                 <a href="https://www.youtube.com/@thisaintmyrealname1/featured" class="uppercase px-3"
                     target="_blank">videos</a>
-                <a href="#" class="uppercase px-3">Contact</a>
             </div>
             <div class="lowercase pb-6">&copy; 2024 // p o i n t l e s s</div>
         </div>
