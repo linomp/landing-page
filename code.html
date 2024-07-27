@@ -64,15 +64,14 @@
         </div>
     </nav>
 
-    <div class="px-6 mb-8">
-        <div class=" flex flex-col shadow px-4 mt-4 mb-8 bg-black justify-start p-6 text-white items-center">
-            <span class="uppercase text-medium font-bold text-yellow-200  text-2xl">
+    <div class="px-6 mb-3">
+        <div class="flex flex-col shadow px-4 mt-4 mb-8 justify-start p-3 text-white items-center">
+            <span class="px-4  py-4 bg-black uppercase text-medium font-bold text-yellow-200  text-2xl">
                 Latest projects
             </span>
         </div>
 
-        <div class="grid lg:gap-8 lg:grid-cols-2 md:grid-cols-1 md:gap-4 sm:grid-cols-1 sm:gap-4 mb-5">
-
+        <div class="grid lg:gap-8 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 sm:gap-4 mb-5">
             <div class="border flex flex-col items-center bg-black shadow md:flex-row md:max-w-full mb-4">
                 <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-100"
                     src="./media/img/webp/pdmgame.webp" alt="">
@@ -111,7 +110,7 @@
                 </div>
             </div>
 
-            <div class="border flex flex-col items-center bg-black shadow md:flex-row md:max-w-full">
+            <div class="border flex flex-col items-center bg-black shadow md:flex-row md:max-w-full mb-5">
                 <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:min-w-100"
                     src="./media/img/webp/svelte-qr-mqtt-min.webp" alt="">
                 <div class="w-fit flex flex-col justify-between p-4 leading-normal">
@@ -160,8 +159,19 @@
                     <h6 class="mb-4 text-s font-bold tracking-tight text-white">2023</h6>
                     <p class="mb-3 font-normal text-gray-400">Swarm-assisted conversational vendor data aggregator.
                         Entry for Junction Hackathon 2023 in Helsinki 🇫🇮</p>
-                    <p class="mb-3 font-normal text-gray-400">// TODO
-                    </p>
+                    <ul class="list-outside list-['-_'] pl-5 space-y-2 text-gray-400 text-sm">
+                        <li class="font-bold">Steven Esposito 🇮🇹🤌 <span class="font-normal">Head of Data,
+                                AI and media.</span></li>
+                        <li class="font-bold">Erald Keshi 🇦🇱🦅 <span class="font-normal">UI/UX
+                                Revolutionary Disrupter.</span></li>
+                        <li class="font-bold">Martin Põhjakivi 🇪🇪🍄 <span class="font-normal">Estonian Food
+                                and Beverage Import/Export Domain Expert.</span></li>
+                        <li class="font-bold">Lino Mediavilla Ponce 🇪🇨🍌 <span class="font-normal">Head of
+                                Indoor Logistics.</span></li>
+                        <li class="font-bold">Sergi Martinez Rodriguez 🇪🇸😴 <span class="font-normal">Chairman
+                                of the Board.</span></li>
+                    </ul>
+
                     <div class="flex space-x-2 mt-4 mb-4">
                         <span class="flex items-center px-2 py-1 bg-fastapi-light text-sm font-medium rounded-full">
 
@@ -179,52 +189,29 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="border flex flex-col items-center bg-black shadow md:flex-row md:max-w-full">
-                <img class="pl-4 pr-2 object-cover w-full rounded-t-lg h-96 md:h-auto md:min-w-100"
-                    src="./media/img/webp/sp_yt_migration.webp" alt="">
-                <div class="w-fit flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Playlist migration tool</h5>
-                    <h6 class="mb-4 text-s font-bold tracking-tight text-white">2023</h6>
-                    <p class="mb-3 font-normal text-gray-400">Google Sheets script for copying all songs from a spotify
-                        playlist to a youtube playlist, allowing you to expand it with good underground stuff that is
-                        not on spotify! </p>
-                    <p class="mb-3 font-normal text-gray-400">// TODO
-                    </p>
-                    <div class="flex space-x-2 mt-4 mb-4">
-                        <span class="flex items-center px-2 py-1 bg-javascript text-sm font-medium rounded-full">
-                            Javascript
-                        </span>
-                    </div>
-
-                    <div class="flex flex-col mt-4 mb-2">
-                        <a href="https://github.com/linomp/playlist-migration-tool" target="_blank"
-                            class="w-fit uppercase text-yellow-200 hover:text-yellow-50">Check repo
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-            <div class="flex flex-col shadow px-4 mt-8 justify-start p-6 text-white items-center">
-                <a class="text-yellow-200 hover:text-purple-400" href="https://github.com/linomp" target="_blank">
-                    See more projects on github ->
-                </a>
-            </div>
         </div>
 
-        <footer class="w-full sticky top-full border-t bg-black pb-4 text-white">
-            <div class="flex flex-col items-center">
-                <div class="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
-                    <a href="/index.html" class="uppercase px-3">Home</a>
-                    <a href="https://github.com/linomp/pointless" class="uppercase px-3" target="_blank">Source</a>
-                    <a href="https://www.youtube.com/@thisaintmyrealname1/featured" class="uppercase px-3"
-                        target="_blank">videos</a>
-                </div>
-                <div class="lowercase pb-6">&copy; 2024 // p o i n t l e s s</div>
+        <div class="flex flex-col shadow px-4 mt-8 justify-start p-6 text-white items-center mb-4">
+            <a class="px-4 bg-black text-yellow-200 hover:text-purple-400" href="https://github.com/linomp"
+                target="_blank">
+                See more projects on github ->
+            </a>
+        </div>
+    </div>
+
+    <footer class="w-full sticky top-full border-t bg-black pb-4 text-white">
+        <div class="flex flex-col items-center">
+            <div class="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
+                <a href="/index.html" class="uppercase px-3">Home</a>
+                <a href="https://github.com/linomp/pointless" class="uppercase px-3" target="_blank">Source</a>
+                <a href="https://www.youtube.com/@thisaintmyrealname1/featured" class="uppercase px-3"
+                    target="_blank">videos</a>
             </div>
-        </footer>
+            <div class="lowercase pb-6">&copy; 2024 // p o i n t l e s s</div>
+        </div>
+    </footer>
 
 </body>
 
