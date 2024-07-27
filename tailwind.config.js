@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./*.html"],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        'fastapi': '#009485',
+        'fastapi-light': '#30b2a1',
+        'svelte': '#FF3E00',
+        'svelte-light': '#ff6e42'
+      }
+    },
   },
   plugins: [
   ],
