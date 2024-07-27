@@ -7,7 +7,8 @@ module.exports = {
         'fastapi': '#009485',
         'fastapi-light': '#30b2a1',
         'svelte': '#FF3E00',
-        'svelte-light': '#ff6e42'
+        'svelte-light': '#ff6e42',
+        'javascript': "#F1E05A"
       }
     },
   },
