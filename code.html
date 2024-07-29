@@ -29,6 +29,7 @@
                     <li><a href="/gallery.html" class="uppercase px-3">gallery</a></li>
                 </ul>
             </nav>
+
             <div class="flex items-center text-lg no-underline text-white pr-6 ml-3">
                 <a href="https://github.com/linomp" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
@@ -71,132 +72,164 @@
             </span>
         </div>
 
-        <div class="grid lg:gap-8 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 sm:gap-4 mb-5">
-            <div class="border flex flex-col items-center bg-black shadow md:flex-row md:max-w-full mb-4">
-                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-100"
-                    src="./media/img/webp/pdmgame.webp" alt="">
-                <div class="w-fit flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">The Predictive
+        <div class="grid lg:gap-8 lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 gap-4 mb-5">
+
+            <div class="flex flex-col items-start border shadow w-full  bg-black p-2 justify-start h-fit">
+                <div class="p-4">
+                    <h5 class="mb-1 text-2xl font-bold tracking-tight text-white">The Predictive
                         Maintenance Game</h5>
-                    <h6 class="mb-4 text-s font-bold tracking-tight text-white">2024</h6>
-                    <p class="mb-3 font-normal text-gray-400">I like the topic so much that I made a game about it.</p>
-                    <p class="mb-3 font-normal text-gray-400">In this simulation game your goal is
-                        to
-                        maximize profit
-                        &
-                        lifespan of your machine, with sensors & predictive analytics at your disposal.</p>
-                    <p class="mb-3 font-normal text-gray-400">It uses MQTT and a Scikit-learn Support Vector Regression
-                        (SVR)
-                        model
-                        under the hood.</p>
-                    <div class="flex space-x-2 mt-4 mb-4">
-                        <span class="flex items-center px-2 py-1 bg-fastapi-light text-sm font-medium rounded-full">
+                    <h6 class="text-s font-bold tracking-tight text-white">2024</h6>
+                </div>
 
-                            FastAPI
-                        </span>
-                        <span class="flex items-center px-2 py-1 bg-svelte-light text-sm font-medium rounded-full">
+                <div class="flex flex-col items-center">
+                    <img class="object-cover w-full px-2" src="./media/img/webp/pdmgame.webp">
 
-                            Svelte
-                        </span>
-                    </div>
-                    <div class="flex flex-col  mt-4 mb-2">
-                        <a href="https://app.pdmgame.xmp.systems/" target="_blank"
-                            class="w-fit uppercase text-yellow-200 hover:text-yellow-50 mb-4">Try game
-                        </a>
-                        <a href="https://github.com/linomp/pdm-game" target="_blank"
-                            class="w-fit uppercase text-yellow-200 hover:text-yellow-50">Check repo
-                        </a>
+                    <div class="flex flex-col justify-between p-4 leading-normal">
+                        <p class="mb-3 font-normal text-gray-400">I like the topic so much that I made a game about it.
+                        </p>
+                        <p class="mb-3 font-normal text-gray-400">In this simulation game your goal is
+                            to
+                            maximize profit
+                            &
+                            lifespan of your machine, with sensors & predictive analytics at your disposal.</p>
+                        <p class="mb-3 font-normal text-gray-400">It uses MQTT and a Scikit-learn Support Vector
+                            Regression
+                            (SVR)
+                            model
+                            under the hood.</p>
+                        <div class="flex space-x-2 mt-6 mb-4">
+                            <span class="flex items-center px-2 py-1 bg-fastapi-light text-sm font-medium rounded-full">
+                                FastAPI
+                            </span>
+                            <span class="flex items-center px-2 py-1 bg-svelte-light text-sm font-medium rounded-full">
+                                Svelte
+                            </span>
+                        </div>
+                        <div class="flex flex-col mt-4">
+                            <a href="https://app.pdmgame.xmp.systems/" target="_blank"
+                                class="w-fit uppercase text-yellow-200 hover:text-purple-400 mb-4">Try game
+                            </a>
+                            <a href="https://github.com/linomp/pdm-game" target="_blank"
+                                class="w-fit uppercase text-yellow-200 hover:text-purple-400">Check repo
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="border flex flex-col items-center bg-black shadow md:flex-row md:max-w-full mb-5">
-                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:min-w-100"
-                    src="./media/img/webp/svelte-qr-mqtt-min.webp" alt="">
-                <div class="w-fit flex flex-col justify-between p-4 leading-normal">
+            <div class="flex flex-col items-start border shadow w-full bg-black p-2 justify-start h-fit">
+                <div class="p-4">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Svelte-QR-MQTT PoC</h5>
                     <h6 class="mb-4 text-s font-bold tracking-tight text-white">2023</h6>
-                    <p class="mb-3 font-normal text-gray-400">A Svelte app with in-browser QR code
-                        generation + interaction through a smartphone (using MQTT over websockets). </p>
-                    <p class="mb-3 font-normal text-gray-400">This one was fun. It started as a React app, but
-                        then we
-                        migrated it to Svelte over some beers in Warsaw 🇵🇱, where we met up with <a
-                            class="text-yellow-200 hover:text-yellow-50" href="https://github.com/m-poh"
-                            target="_blank">@m-poh</a> &
-                        <a class="text-yellow-200 hover:text-yellow-50" href="https://github.com/lmeullibre"
-                            target="_blank">@lmeullibre</a>
-                        to attend a <a class="uppercase text-yellow-200 hover:text-yellow-50"
-                            href="https://youtu.be/eknenF4E72c?si=DbHy3ZEXDQEv_d-a" target="_blank">Dying Fetus</a>
-                        show.
-                    </p>
-                    <p class="mb-3 font-normal text-gray-400">
-                        Needless to say, we all walked out
-                        evangelized into Svelte from
-                        that trip.
-                    </p>
-                    <div class="flex space-x-2 mt-4 mb-4">
-                        <span class="flex items-center px-2 py-1 bg-svelte-light text-sm font-medium rounded-full">
-                            Svelte
-                        </span>
-                    </div>
+                </div>
 
-                    <div class="flex flex-col mt-4 mb-2">
-                        <a href="https://linomp.github.io/svelte-qr-mqtt/" target="_blank"
-                            class="w-fit uppercase text-yellow-200 hover:text-yellow-50 mb-4">Try app
-                        </a>
-                        <a href="https://github.com/linomp/svelte-qr-mqtt" target="_blank"
-                            class="w-fit uppercase text-yellow-200 hover:text-yellow-50">Check repo
-                        </a>
+                <div class="flex flex-col items-center">
+                    <img class="object-cover w-full px-2" src="./media/img/webp/svelte-qr-mqtt-min.webp">
+
+                    <div class="flex flex-col justify-between p-4">
+                        <p class="mb-3 font-normal text-gray-400">A Svelte app with in-browser QR code
+                            generation + interaction through a smartphone (using MQTT over websockets). </p>
+                        <p class="mb-3 font-normal text-gray-400">This one was fun. It started as a React app, but
+                            then we
+                            migrated it to Svelte over some beers in Warsaw 🇵🇱, where we met up with <a
+                                class="text-yellow-200 hover:text-purple-400" href="https://github.com/m-poh"
+                                target="_blank">@m-poh</a> &
+                            <a class="text-yellow-200 hover:text-purple-400" href="https://github.com/lmeullibre"
+                                target="_blank">@lmeullibre</a>
+                            to attend a <a class="uppercase text-yellow-200 hover:text-purple-400"
+                                href="https://youtu.be/eknenF4E72c?si=DbHy3ZEXDQEv_d-a" target="_blank">Dying Fetus</a>
+                            show.
+                        </p>
+                        <p class="mb-3 font-normal text-gray-400">
+                            Needless to say, we all walked out
+                            evangelized into Svelte from
+                            that trip.
+                        </p>
+                        <div class="flex space-x-2 mt-6 mb-4">
+                            <span class="flex items-center px-2 py-1 bg-svelte-light text-sm font-medium rounded-full">
+                                Svelte
+                            </span>
+                        </div>
+                        <div class="flex flex-col mt-4">
+                            <a href="https://linomp.github.io/svelte-qr-mqtt/" target="_blank"
+                                class="w-fit uppercase text-yellow-200 hover:text-purple-400 mb-4">Try app
+                            </a>
+                            <a href="https://github.com/linomp/svelte-qr-mqtt" target="_blank"
+                                class="w-fit uppercase text-yellow-200 hover:text-purple-400">Check repo
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- <div class="border flex flex-col items-center bg-black shadow md:flex-row md:max-w-full">
-                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:min-w-100 pt-4 px-4"
-                    src="./media/img/webp/swarmagan_arch.webp" alt="">
-                <div class="w-fit flex flex-col justify-between p-4 leading-normal">
+            <div class="flex flex-col items-start border shadow w-full bg-black p-2 justify-start h-fit">
+                <div class="p-4">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Swarmagan</h5>
                     <h6 class="mb-4 text-s font-bold tracking-tight text-white">2023</h6>
-                    <p class="mb-3 font-normal text-gray-400">Swarm-assisted conversational vendor data aggregator.
-                        Entry for Junction Hackathon 2023 in Helsinki 🇫🇮</p>
-                    <ul class="list-outside list-['-_'] pl-5 space-y-2 text-gray-400 text-sm">
-                        <li class="font-bold">Steven Esposito 🇮🇹🤌 <span class="font-normal">Head of Data,
-                                AI and media.</span></li>
-                        <li class="font-bold">Erald Keshi 🇦🇱🦅 <span class="font-normal">UI/UX
-                                Revolutionary Disrupter.</span></li>
-                        <li class="font-bold">Martin Põhjakivi 🇪🇪🍄 <span class="font-normal">Estonian Food
-                                and Beverage Import/Export Domain Expert.</span></li>
-                        <li class="font-bold">Lino Mediavilla Ponce 🇪🇨🍌 <span class="font-normal">Head of
-                                Indoor Logistics.</span></li>
-                        <li class="font-bold">Sergi Martinez Rodriguez 🇪🇸😴 <span class="font-normal">Chairman
-                                of the Board.</span></li>
-                    </ul>
+                </div>
 
-                    <div class="flex space-x-2 mt-4 mb-4">
-                        <span class="flex items-center px-2 py-1 bg-fastapi-light text-sm font-medium rounded-full">
+                <div class="flex flex-col items-center">
+                    <img class="object-cover w-full px-4" src="./media/img/webp/swarmagan_arch.webp">
 
-                            FastAPI
-                        </span>
-                        <span class="flex items-center px-2 py-1 bg-svelte-light text-sm font-medium rounded-full">
+                    <div class="flex flex-col justify-between p-4">
+                        <p class="mb-3 font-normal text-gray-400">"Swarm-assisted conversational vendor data
+                            aggregator" (fancy name for a RAG-powered chat app). It was our first time playing with
+                            LLMs and our
+                            entry for Junction Hackathon 2023 in Helsinki 🇫🇮.</p>
 
-                            Svelte
-                        </span>
-                    </div>
+                        <p class="mt-3 mb-3 font-bold font text-gray-400">Our team: </p>
 
-                    <div class="flex flex-col mt-4 mb-2">
-                        <a href="https://github.com/linomp/swarmagan-junction2023" target="_blank"
-                            class="w-fit uppercase text-yellow-200 hover:text-yellow-50">Check repo
-                        </a>
+
+                        <ul class="list-outside list-['-_'] pl-5 space-y-2 text-gray-400 text-sm">
+                            <li class="font-bold"><a class="text-yellow-200 hover:text-purple-400"
+                                    href="https://github.com/Steve389" target="_blank">@Steve389</a>: <span
+                                    class="font-normal">Head of Data,
+                                    AI and media.</span></li>
+                            <li class="font-bold"><a class="text-yellow-200 hover:text-purple-400"
+                                    href="https://github.com/ekeshi1" target="_blank">@ekeshi1</a>: <span
+                                    class="font-normal">UI/UX
+                                    Revolutionary Disrupter.</span></li>
+                            <li class="font-bold"><a class="text-yellow-200 hover:text-purple-400"
+                                    href="https://github.com/m-poh" target="_blank">@m-poh</a>: <span
+                                    class="font-normal">Estonian Food
+                                    and Beverage Import/Export Domain Expert.</span></li>
+                            <li class="font-bold"><a class="text-yellow-200 hover:text-purple-400"
+                                    href="https://github.com/linomp" target="_blank">@linomp</a>: <span
+                                    class="font-normal">Head of
+                                    Indoor Logistics.</span></li>
+                            <li class="font-bold"><a class="text-yellow-200 hover:text-purple-400"
+                                    href="https://github.com/lmeullibre" target="_blank">@lmeullibre</a>: <span
+                                    class="font-normal">Chairman
+                                    of the Board.</span></li>
+                        </ul>
+                        <p class="mt-5 mb-3 font-normal text-xs text-gray-400">(text credits: <a
+                                class="text-yellow-200 hover:text-purple-400" href="https://github.com/lmeullibre"
+                                target="_blank">@lmeullibre</a>)</p>
+                        <div class="flex space-x-2 mt-6 mb-4">
+                            <span class="flex items-center px-2 py-1 bg-fastapi-light text-sm font-medium rounded-full">
+
+                                FastAPI
+                            </span>
+                            <span class="flex items-center px-2 py-1 bg-svelte-light text-sm font-medium rounded-full">
+
+                                Svelte
+                            </span>
+                        </div>
+                        <div class="flex flex-col mt-4">
+                            <a href="https://github.com/linomp/swarmagan-junction2023" target="_blank"
+                                class="w-fit uppercase text-yellow-200 hover:text-purple-400">Check repo
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
         </div>
 
         <div class="flex flex-col shadow px-4 mt-8 justify-start p-6 text-white items-center mb-4">
             <a class="px-4 bg-black text-yellow-200 hover:text-purple-400" href="https://github.com/linomp"
                 target="_blank">
-                See more projects on github ->
+                See more projects on github ➟
             </a>
         </div>
     </div>
