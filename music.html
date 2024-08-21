@@ -17,10 +17,10 @@
     <script>
         const setupPlaceholderReplacement = (event) => {
             const id = event.currentTarget.id
-            setTimeout(replacePLaceholder(id), 1500);
+            setTimeout(replacePlaceholder(id), 1500);
         }
 
-        const replacePLaceholder = (id) => () => {
+        const replacePlaceholder = (id) => () => {
             document.getElementById(`${id}_placeholder`).className = "hidden";
             document.getElementById(id).className = document.getElementById(id).className.replace("h-0", "");
         }
