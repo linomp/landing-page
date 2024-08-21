@@ -29,7 +29,14 @@
             }
             audio.play();
         }
+
+        const iframeOnload = (event) => {
+            id = event.target.id
+            document.getElementById(id).className = document.getElementById(id).className.replace("h-0", "h-full");
+            document.getElementById(`${id}_placeholder`).className = "hidden";
+        }
     </script>
+
 </head>
 
 <body class="h-full flex flex-col bg-black bg-cover bg-repeat font-roboto"
@@ -40,7 +47,8 @@
             <nav>
                 <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
                     <li><a href="/index.html" class="uppercase px-3 hover:underline">home</a></li>
-                    <li><a title="Coming soon" href="/code.html" class="uppercase px-3 hover:underline">code</a></li>
+                    <li><a title="Coming soon" href="/code.html" class="uppercase px-3 hover:underline">code</a>
+                    </li>
                     <li><a title="Coming soon" href="/music.html" class="uppercase px-3 hover:underline">music</a>
                     </li>
                     <li><a href="/gallery.html" class="uppercase px-3 hover:underline">gallery</a></li>
@@ -124,13 +132,15 @@
                     <a href="/code.html" class="text-blue-200 text-sm font-bold uppercase pb-4 hover:underline">Dev
                         projects</a>
                     <a href="https://github.com/linomp/pdm-game"
-                        class="text-white text-3xl font-bold hover:text-purple-400 hover:underline pb-4">The Predictive
+                        class="text-white text-3xl font-bold hover:text-purple-400 hover:underline pb-4">The
+                        Predictive
                         Maintenance Game</a>
                     <p class="text-white text-sm pb-3">
                         Released in July 2024
                     </p>
                     <div class="text-white pb-6">
-                        <p class="mb-3">A simulation game inspired by the likes of Game Dev Tycoon, where your goal is
+                        <p class="mb-3">A simulation game inspired by the likes of Game Dev Tycoon, where your goal
+                            is
                             to
                             maximize profit
                             &
@@ -151,7 +161,8 @@
                     <a href="/music.html" class="text-blue-200 text-sm font-bold uppercase pb-4 hover:underline">Music
                         Projects</a>
                     <a href="https://open.spotify.com/intl-es/track/6MwtXBd40MTGYP91q0ioid?si=29cb05bc21a64d87"
-                        class="text-white text-3xl font-bold hover:text-purple-400 hover:underline pb-4">Masakrador -
+                        class="text-white text-3xl font-bold hover:text-purple-400 hover:underline pb-4">Masakrador
+                        -
                         Condenada</a>
                     <p class="text-white text-sm pb-3">
                         Recorded DIY
@@ -168,16 +179,21 @@
             </div>
 
             <div class="flex flex-col shadow my-4  h-fit">
-                <iframe class="w-full aspect-square" loading="lazy"
+
+                <img id="lucta_placeholder" src="./media/img/lucta.jpg" class="w-full aspect-square">
+                <iframe id="lucta" onload="iframeOnload(event)" class="w-full aspect-square h-0" loading="lazy"
                     src="https://bandcamp.com/EmbeddedPlayer/album=2632919549/size=large/bgcol=333333/linkcol=FEF08A/minimal=true/transparent=true/"
                     seamless><a href="https://luctapunk.bandcamp.com/album/eterna-lotta-2">Eterna Lotta by
-                        Lucta</a></iframe>
+                        Lucta</a>
+                </iframe>
+
                 <div class=" bg-black flex flex-col justify-start p-6">
                     <a href="/music.html"
                         class="text-blue-200 text-sm font-bold uppercase pb-4 hover:underline">Recommended
                         albums</a>
                     <a href="https://luctapunk.bandcamp.com/album/eterna-lotta-2"
-                        class="text-white text-3xl font-bold hover:text-purple-400 hover:underline pb-4">Eterna Lotta by
+                        class="text-white text-3xl font-bold hover:text-purple-400 hover:underline pb-4">Eterna
+                        Lotta by
                         Lucta</a>
                     <p class="text-white text-sm pb-3">
                         Released in June 2024 on Static Shock Records
@@ -185,7 +201,8 @@
                     <div class="text-white pb-6">
                         <p class="mb-3">Hardcore punk from Milan with dark elements, wet + distorted
                             guitars, fast drums and explosive vocals.</p>
-                        <p class="mb-3">Excellent production on this one, they've really cemented their sonic identity.
+                        <p class="mb-3">Excellent production on this one, they've really cemented their sonic
+                            identity.
                         </p>
                     </div>
                     <a href="https://luctapunk.bandcamp.com/album/eterna-lotta-2" target="_blank"
