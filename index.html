@@ -14,22 +14,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./css/output.css">
     <script>
-        const audio = new Audio()
-        audio.autoplay = false;
-        audio.loop = true;
-        audio.type = 'audio/mpeg';
-        audio.src = './media/the_descent_clip.mp3';
-        audio.volume = 0.15;
-
-        const playClip = function () {
-            if (!audio.paused) {
-                audio.pause();
-
-                return;
-            }
-            audio.play();
-        }
-
         const setupPlaceholderReplacement = (event) => {
             const id = event.currentTarget.id
             setTimeout(replacePlaceholder(id), 1500);
@@ -104,9 +88,9 @@
         </div>
     </header>
 
-    <div class="flex flex-col lg:px-12 md:px-4 items-center">
+    <div class="flex flex-col px-4 items-center xl:w-2/3 lg:w-3/4 sm:w-7/8 m-auto">
         <div class="bio w-full flex flex-col shadow px-4 mb-4">
-            <div class=" bg-black flex flex-col justify-start p-6 text-white">
+            <div class="border bg-black flex flex-col justify-start p-6 text-white">
                 <p class="mb-3">
                     Hi. I'm Lino, a software dev from
                     <a class="text-yellow-200 hover:text-purple-400 hover:underline"
@@ -114,23 +98,15 @@
                         Manta, Ecuador.
                     </a>
                 </p>
-                <p class="mb-3">
-                    Ever since I left my hometown for studies in 2013, I've found myself living <span
-                        class="italic text-yellow-200 cursor-pointer hover:text-purple-400 hover:underline"
-                        onmousedown="playClip()" title="Signalwave album by Infinity Frequencies, 2018">between
-                        two
-                        worlds</span>, and it
-                    remains
-                    true to this day.
+                <p>
+                    Welcome to my corner of the web!
                 </p>
-                <p> This website attempts to capture that sensation.</p>
             </div>
         </div>
 
         <div
-            class="projects w-full grid lg:grid-cols-3 lg:gap-8 md:grid-cols-3 md:gap-4 sm:grid-cols-1 sm:gap-1 px-4 mb-5">
-
-            <div class="flex flex-col shadow my-4  h-fit">
+            class="projects w-full grid xl:grid-cols-3 xl:gap-8 lg:grid-cols-2 lg:gap-8 md:grid-cols-2 md:gap-8 sm:grid-cols-1 sm:gap-2 px-4 mb-5">
+            <div class="flex flex-col shadow my-4 h-fit border">
                 <img src="./media/img/webp/pdmgame.webp" class="min-w-full">
                 <div class=" bg-black flex flex-col justify-start p-6">
                     <a href="/code.html" class="text-blue-200 text-sm font-bold uppercase pb-4 hover:underline">Dev
@@ -159,7 +135,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col shadow my-4  h-fit">
+            <div class="flex flex-col shadow my-4 h-fit border">
                 <img src="./media/img/grind.jpg" class="min-w-full">
                 <div class=" bg-black flex flex-col justify-start p-6">
                     <a href="/music.html" class="text-blue-200 text-sm font-bold uppercase pb-4 hover:underline">Music
@@ -182,8 +158,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col shadow my-4  h-fit">
-
+            <div class="flex flex-col shadow my-4  h-fit border">
                 <img id="lucta_placeholder" src="./media/img/lucta.jpg" class="w-full aspect-square">
                 <iframe id="lucta" onload="setupPlaceholderReplacement(event)" class="w-full aspect-square h-0"
                     loading="lazy"
@@ -224,7 +199,7 @@
             <div class="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
                 <a href="/index.html" class="uppercase px-3 hover:underline sm:mb-2">Home</a>
                 <a href="https://github.com/linomp/pointless" class="uppercase px-3 hover:underline"
-                    target="_blank">Site source</a>
+                    target="_blank">Source</a>
                 <a href="/contact.html" class="uppercase px-3 hover:underline">Contact</a>
             </div>
             <div class="lowercase pb-6">&copy; 2024 // p o i n t l e s s</div>
